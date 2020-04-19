@@ -4,6 +4,7 @@
 {{ end }}
 
 {{ $class := .Get "class" | default "btn-dark" }}
+{{ $blank := .Get "blank" | default false }}
 {{ $href := .Get "href" | default "#" }}
 
-<a href="{{ $href }}" role="button" class="btn {{ $class }}">{{ $title }}</a>
+<a href="{{ $href }}" role="button" class="btn {{ $class }}" {{ if $blank }} target="_blank" {{ end }}>{{ $title }}</a>
