@@ -50,7 +50,7 @@ h2 {
 h3 {
     font-size: 1.25em;
     border-style: none none solid solid;
-    border-width: 0 0 0.15em 0.8em;
+    border-width: 0 0 0.1em 0.5em;
     border-color: red;
     padding: 0.2em 0em 0.2em 0.4em;
     margin-bottom: 1em;
@@ -58,8 +58,7 @@ h3 {
 
 h4 {
     font-size: 1.15em;
-    border-style: none none solid none;
-    border-width: 0 0 0.15em 0.8em;
+    border-bottom: solid 0.1em;
     border-color: green;
     padding: 0.2em 0em 0.2em 0.4em;
     margin-bottom: 1em;
