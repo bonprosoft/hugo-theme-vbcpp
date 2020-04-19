@@ -1,6 +1,11 @@
+{{ $name := .Get "name"}}
+{{ if not $name }}
+{{ errorf "missing value for param 'name': %s" .Position }}
+{{ end }}
+
 <section class="profile">
     <div class="profile-heading">
-        {{ with .Get "name"}}<h1>{{.}}</h1>{{ end }}
+        <h1>{{ $name }}</h1>
         {{ if isset .Params "avatar" }}
         <p><img src='{{ .Get "avatar"}}'></p>
         {{ end }}
