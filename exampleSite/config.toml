@@ -1,0 +1,28 @@
+baseURL = "http://example.comcom/"
+languageCode = "en-us"
+title = "Sample website for hugo-theme-vbcpp"
+theme = "hugo-theme-vbcpp"
+themesDir = "../../"
+publishDir = "public"
+hasCJKLanguage = true
+summaryLength = 280
+paginate = 10
+disableKinds = ["404"]
+copyright = "&copy; Copyrights 2020 Yuki Igarashi"
+
+[params]
+    avatar = "logo.png"
+
+[menu]
+  [[menu.navigation]]
+    name = "Top"
+    url = "http://example.com/"
+    weight = 1
+  [[menu.navigation]]
+    name = "About"
+    url = "http://example.com/about"
+    weight = 2
+  [[menu.navigation]]
+    name = "Contact"
+    url = "http://example.com/contact"
+    weight = 3

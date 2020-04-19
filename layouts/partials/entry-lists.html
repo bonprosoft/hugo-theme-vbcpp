@@ -1,0 +1,16 @@
+<div class="entry-list">
+    {{ range .Paginator.Pages }}
+    <article>
+        <h1><a href="{{.Permalink}}">{{.Title}}</a></h1>
+        <p class="text-right">{{.Date.Format "2006-01-02"}}</p>
+        <p>
+            {{ .Summary | plainify }}
+
+            {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}">Read More…</a>
+            {{ end }}
+        </p>
+    </article>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+</div>

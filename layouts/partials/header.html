@@ -1,0 +1,28 @@
+<header>
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            {{ $baseURL := .Site.BaseURL }}
+            {{ with .Site.Params.avatar }}
+            <div class="navbar-logo">
+                <a class="navbar-brand" href="{{ $baseURL }}">
+                    <img src="{{ . | relURL }}" alt="avatar">
+                </a>
+            </div>
+            {{ end }}
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbar-links"
+                aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-links">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    {{ range .Site.Menus.navigation }}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ .URL }}">{{.Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

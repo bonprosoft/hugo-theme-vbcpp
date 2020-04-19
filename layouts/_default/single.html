@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article>
+    {{ if .Params.pretitle }}
+    <p class="pre-title">{{ .Params.pretitle }}</p>
+    {{ end }}
+    <h1>{{.Title}}</h1>
+    <p class="text-right">{{.Date.Format "2006-01-02"}}</p>
+    {{- partial "social-share.html" . -}}
+
+    {{.Content}}
+</article>
+
+{{- partial "social-share.html" . -}}
+
+{{- partial "post-navigation.html" . -}}
+
+{{ end }}

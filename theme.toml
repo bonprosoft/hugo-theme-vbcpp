@@ -1,0 +1,12 @@
+name = "vbcpp.net"
+license = "MIT"
+licenselink = "https://github.com/bonprosoft/vbcpp.net/blob/master/LICENSE"
+description = "Theme for vbcpp.net"
+homepage = "http://vbcpp.net/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Yuki Igarashi"
+  homepage = "http://vbcpp.net/"
