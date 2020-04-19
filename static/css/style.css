@@ -218,3 +218,28 @@ pre {
     overflow: hidden;
     margin: 1em 0;
 }
+
+section.profile {
+    margin-bottom: 1em;
+}
+
+.profile-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: solid #CCC 1px;
+    flex-wrap: wrap;
+}
+
+.profile-heading h1 {
+    border: none;
+}
+
+.profile-heading p {
+    margin: 0;
+}
+
+.profile-heading img {
+    height: 100px;
+}

@@ -1,0 +1,9 @@
+<section class="profile">
+    <div class="profile-heading">
+        {{ with .Get "name"}}<h1>{{.}}</h1>{{ end }}
+        {{ if isset .Params "avatar" }}
+        <p><img src='{{ .Get "avatar"}}'></p>
+        {{ end }}
+    </div>
+    {{ .Inner }}
+</section>
