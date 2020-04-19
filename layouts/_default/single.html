@@ -1,17 +1,26 @@
 {{ define "main" }}
 <article>
+    {{ if not .Params.notitle }}
     {{ if .Params.pretitle }}
     <p class="pre-title">{{ .Params.pretitle }}</p>
-    {{ end }}
+    {{ end }} {{/* pretitle */}}
     <h1>{{.Title}}</h1>
     <p class="text-right">{{.Date.Format "2006-01-02"}}</p>
+    {{ end }} {{/* notitle */}}
+
+    {{ if not .Params.nosharebutton }}
     {{- partial "social-share.html" . -}}
+    {{ end }} {{/* nosharebutton */}}
 
     {{.Content}}
 </article>
 
+{{ if not .Params.nosharebutton }}
 {{- partial "social-share.html" . -}}
+{{ end }}
 
+{{ if not .Params.nonavigation }}
 {{- partial "post-navigation.html" . -}}
+{{ end }}
 
 {{ end }}
