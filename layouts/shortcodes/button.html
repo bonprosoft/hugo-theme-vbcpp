@@ -1,0 +1,9 @@
+{{ $title := .Get "title"}}
+{{ if not $title }}
+{{ errorf "missing value for param 'title': %s" .Position }}
+{{ end }}
+
+{{ $class := .Get "class" | default "btn-dark" }}
+{{ $href := .Get "href" | default "#" }}
+
+<a href="{{ $href }}" role="button" class="btn {{ $class }}">{{ $title }}</a>
